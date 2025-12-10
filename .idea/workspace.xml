@@ -5,20 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e5feaad1-5df9-4837-9f9f-cdfb560f3a1c" name="Changes" comment="init">
-      <change afterPath="$PROJECT_DIR$/backend/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/routers/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/standings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/api_client.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/api_client.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/database.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/database.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/routers/auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/routers/auth.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/routers/matches.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/routers/matches.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/routers/players.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/routers/players.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/routers/standings.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/routers/standings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/routers/teams.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/routers/teams.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/pages/standings.py" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/pages/standings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/standings.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/standings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +84,15 @@
       <option name="project" value="LOCAL" />
       <updated>1765383633901</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="init">
+      <option name="closed" value="true" />
+      <created>1765390620786</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1765390620786</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
