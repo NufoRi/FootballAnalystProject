@@ -1,6 +1,6 @@
 from fastapi import APIRouter
-from database import get_db_connection
-from models.match import MatchOut
+from backend.database import get_db_connection
+from backend.models.match import MatchOut
 
 router = APIRouter(prefix="/matches")
 

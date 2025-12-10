@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from routers import teams, matches, players, standings, auth
+from backend.routers import teams, matches, players, standings, auth
 
 app = FastAPI()
 

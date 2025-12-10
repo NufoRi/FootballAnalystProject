@@ -1,24 +1,19 @@
-import requests
 import os
+import requests
 
-API_KEY = os.getenv("FOOTBALL_API_KEY")
-BASE_URL = "https://v3.football.api-sports.io"
+RAPIDAPI_KEY = os.getenv("RAPIDAPI_KEY")
+
+BASE_URL = "https://api-football-v1.p.rapidapi.com/v3"
 
 HEADERS = {
-    "x-apisports-key": API_KEY
+    "x-rapidapi-key": RAPIDAPI_KEY,
+    "x-rapidapi-host": "api-football-v1.p.rapidapi.com"
 }
 
 def get_standings():
     url = f"{BASE_URL}/standings?league=39&season=2025"
+    print("Requesting:", url)
     response = requests.get(url, headers=HEADERS)
-    return response.json()
-
-def get_teams():
-    url = f"{BASE_URL}/teams?league=39&season=2025"
-    response = requests.get(url, headers=HEADERS)
-    return response.json()
-
-def get_fixtures():
-    url = f"{BASE_URL}/fixtures?league=39&season=2025"
-    response = requests.get(url, headers=HEADERS)
+    print("STATUS:", response.status_code)
+    print("RAW:", response.text)
     return response.json()

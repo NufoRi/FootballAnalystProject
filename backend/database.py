@@ -1,11 +1,14 @@
 import sqlite3
+import os
 
-DB_NAME = "football.db"
+DB_NAME = os.path.join(os.path.dirname(__file__), "football.db")
 
 def get_db_connection():
-    conn = sqlite3.connect(DB_NAME)
-    conn.row_factory = sqlite3.Row
-    return conn
+        db_path = os.path.abspath(DB_NAME)
+        print("🔍 USING DATABASE:", db_path)
+        conn = sqlite3.connect(DB_NAME)
+        conn.row_factory = sqlite3.Row
+        return conn
 
 def create_database():
     conn = get_db_connection()

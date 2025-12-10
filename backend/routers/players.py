@@ -1,6 +1,6 @@
 from fastapi import APIRouter
-from database import get_db_connection
-from models.player import PlayerOut
+from backend.database import get_db_connection
+from backend.models.player import PlayerOut
 
 router = APIRouter(prefix="/players")
 

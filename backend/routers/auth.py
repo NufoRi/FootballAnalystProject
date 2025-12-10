@@ -1,7 +1,7 @@
 from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel
-from utils.security import hash_password, verify_password
-from database import get_db_connection
+from backend.utils.security import hash_password, verify_password
+from backend.database import get_db_connection
 
 router = APIRouter(prefix="/auth")
 
@@ -16,6 +16,8 @@ class UserLogin(BaseModel):
 
 @router.post("/register")
 def register(user: UserRegister):
+    print("📩 RAW USER INPUT:", user)
+    print("📩 PASSWORD RECEIVED:", repr(user.password))
     conn = get_db_connection()
     cur = conn.cursor()
 
@@ -24,6 +26,12 @@ def register(user: UserRegister):
 
     if existing:
         raise HTTPException(status_code=400, detail="Username already exists")
+
+    if len(user.password.encode("utf-8")) > 72:
+        raise HTTPException(
+            status_code=400,
+            detail="Password too long (max 72 characters)"
+        )
 
     hashed_pw = hash_password(user.password)
 

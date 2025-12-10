@@ -1,6 +1,6 @@
 from fastapi import APIRouter
-from database import get_db_connection
-from models.team import TeamOut
+from backend.database import get_db_connection
+from backend.models.team import TeamOut
 
 router = APIRouter(prefix="/teams")
 
