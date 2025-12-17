@@ -1,20 +1,16 @@
 from fastapi import APIRouter
-from backend.database import get_db_connection
-from backend.models.player import PlayerOut
+from backend.api_client import get_top_scorers, get_top_assisters, get_star_performers
 
-router = APIRouter(prefix="/players")
+router = APIRouter(prefix="/players", tags=["Players"])
 
-@router.get("/", response_model=list[PlayerOut])
-def get_players(team_id: int | None = None):
-    conn = get_db_connection()
-    cur = conn.cursor()
+@router.get("/topscorers")
+def top_scorers():
+    return get_top_scorers()
 
-    if team_id:
-        cur.execute("SELECT * FROM players WHERE team_id = ?", (team_id,))
-    else:
-        cur.execute("SELECT * FROM players")
+@router.get("/topassists")
+def top_assists():
+    return get_top_assisters()
 
-    rows = cur.fetchall()
-    conn.close()
-
-    return [dict(row) for row in rows]
+@router.get("/star-performers")
+def star_performers():
+    return get_star_performers()
